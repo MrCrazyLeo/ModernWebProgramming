@@ -1,0 +1,126 @@
+body{
+    background-image: url(http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/background.png);
+    font-size: 8pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: none;
+    padding: none;
+}
+
+.image_banner{
+    background-image: url(http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/bannerbackground.png);
+    background-repeat: repeat-x;
+    background-size:auto 50px;
+    height: 50px;
+    text-align: center;
+    /* background-clip: content-box; */
+}
+
+.title{
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-align: center;
+}
+
+.container{
+    width: 800px;
+    margin:0 auto;
+    border:4px gray solid;
+}
+
+
+
+/* Title */
+.rottenbig{
+    background-attachment: local;
+    background-clip: padding-box;
+    background-image: url(http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rottenbackground.png);
+    background-repeat: repeat-x;
+    height: 83px;
+    text-align: left;
+    /* float: left; */
+}
+
+.rottenbig img{
+    float:left;
+}
+.percent_32{
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+    /* vertical-align: text-bottom; */
+    float: left;
+}
+
+.reviews_88{
+    color: white;
+    font-size: 8pt;
+    vertical-align: text-bottom;
+}
+
+/* Comment section */
+.quote_box{
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #E1D697;
+    border: 2px solid gray;
+    padding: 8px;
+    overflow:auto;
+} 
+
+
+.comment,
+.left_column,
+.right_column
+{
+    float: left;
+    overflow: auto;
+    margin-left: 2%;
+    margin-top: 0;
+    position: relative;
+    width: 47%
+}
+.comment img{
+    float: left;
+    margin-right: 5px;
+}
+
+
+/* General Overview section */
+.general_overview {
+    float:right;
+    width: 250px;
+    background-color: #A2B964;
+    font-size: 8pt;
+    font-family: Arial,sans-serif
+}
+
+.general_overview dl{
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    margin: 10px;
+    padding: 0;
+}
+  
+.general_overview dt{
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+/* Bottom Bar */
+.bottom_bar{
+    background-color: #A2B964;
+    padding: 5px;
+    text-align: center;
+}
+
+/* W3C Validator */
+.validator{
+   position: fixed;
+   bottom: 0;
+   right: 0;
+}
+
+.validator img{
+    border: none;
+}
