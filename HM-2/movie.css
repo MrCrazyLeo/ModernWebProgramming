@@ -2,8 +2,9 @@ body{
     background-image: url(http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/background.png);
     font-size: 8pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
+    /* overflow: auto; */
 }
 
 .image_banner{
@@ -26,14 +27,19 @@ body{
     width: 800px;
     margin:0 auto;
     border:4px gray solid;
+    overflow: auto;
+}
+
+.main_container{
+    overflow: hidden;
 }
 
 
 
 /* Title */
 .rottenbig{
-    background-attachment: local;
-    background-clip: padding-box;
+    /* background-attachment: local; */
+    /* background-clip: padding-box; */
     background-image: url(http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rottenbackground.png);
     background-repeat: repeat-x;
     height: 83px;
@@ -42,23 +48,44 @@ body{
 }
 
 .rottenbig img{
-    float:left;
+    vertical-align: bottom;
 }
 .percent_32{
     color: red;
     font-size: 48pt;
     font-weight: bold;
-    /* vertical-align: text-bottom; */
-    float: left;
+    vertical-align: text-bottom;
+    /* float: left; */
 }
 
 .reviews_88{
     color: white;
     font-size: 8pt;
-    vertical-align: text-bottom;
+    font-weight: normal;
+    /* vertical-align: text-bottom; */
 }
 
 /* Comment section */
+.comment{
+    width: 550px;
+}
+
+.left_column,
+.right_column
+{
+    float: left;
+    /* overflow: auto; */
+    margin-left: 2%;
+    margin-top: 0;
+    position: relative;
+    width: 47%
+}
+
+.left_column img, .right_column img{
+    float: left;
+    margin-right: 5px;
+}
+
 .quote_box{
     font-size: 8pt;
     font-weight: bold;
@@ -68,22 +95,14 @@ body{
     overflow:auto;
 } 
 
-
-.comment,
-.left_column,
-.right_column
-{
-    float: left;
+.reviewer{
+    margin: auto auto 3em auto;
     overflow: auto;
-    margin-left: 2%;
-    margin-top: 0;
-    position: relative;
-    width: 47%
-}
-.comment img{
-    float: left;
-    margin-right: 5px;
-}
+  }
+
+span.publication{
+    font-style: italic;
+  }
 
 
 /* General Overview section */
@@ -112,6 +131,10 @@ body{
     background-color: #A2B964;
     padding: 5px;
     text-align: center;
+}
+
+p.page{
+    margin: 0;
 }
 
 /* W3C Validator */
