@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Leo" />
+    <title>Leo的破壳萌计算器</title>
+    <link rel="icon" sizes="196x196" href="img/calculator.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="screen">
+            <div class="screen_display" id="display"></div>
+        </div>
+
+        <div id="buttons">
+            <div class="keys">
+                <button class="operator orangeFont" onclick="processExpress('AC')">
+                    AC
+                </button>
+                <button class="operator" onclick="processExpress('(')">(</button>
+                <button class=" operator " onclick="processExpress( ')')">)</button>
+                <button class="operator " onclick="processExpress('/') " id="divide ">
+                    ÷
+                </button>
+
+                <button class="number " onclick="processExpress(7) ">7</button>
+                <button class="number " onclick="processExpress(8) ">8</button>
+                <button class="number " onclick="processExpress(9) ">9</button>
+                <button class="operator " value="ccc " onclick="processExpress('*') " id="multiply ">
+                    ×
+                </button>
+
+                <button class="number " onclick="processExpress(4) ">4</button>
+                <button class="number " onclick="processExpress(5) ">5</button>
+                <button class="number " onclick="processExpress(6) ">6</button>
+                <button class="operator " onclick="processExpress('-') " id="subtract ">
+                    -
+                </button>
+
+                <button class="number " onclick="processExpress(1) ">1</button>
+                <button class="number " onclick="processExpress(2) ">2</button>
+                <button class="number " onclick="processExpress(3) ">3</button>
+                <button class="operator " onclick="processExpress('+') " id="add ">
+                    +
+                </button>
+
+                <button class="operator " onclick="processExpress('<-') " id="backspace">
+                    &nbsp;
+                </button>
+                <button class="number " onclick="processExpress(0) ">0</button>
+                <button class="operator " onclick="processExpress('.') ">.</button>
+                <button class="operator orangeBG " onclick="processExpress('=') " id="key-calculate ">
+                    =
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
