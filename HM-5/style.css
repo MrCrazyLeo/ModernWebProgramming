@@ -61,7 +61,8 @@ h1{
     width: 20%;
     margin:0 auto;
     border-bottom: none;
-    margin-top:45px;
+    margin-top:44px;
+    top:1px;
 }
 
 #mazeContainer .specialWall{
@@ -73,10 +74,9 @@ h1{
     font-weight: bold;
     position: relative;
     margin-top: 1px;
-    /* margin-bottom: 1px; */
 }
 
-#stratBlock{
+#startBlock{
     background-color: rgb(130, 255, 131);
     float: left;
     clear: left;
