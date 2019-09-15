@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta name="author" content="Leo" />
+    <meta charset="utf-8" />
+    <link rel="icon" sizes="196*110" href="game.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="game.js"></script>
+    <title>Leo的小游戏</title>
+</head>
+
+<body>
+    <!-- 迷宫 -->
+    <div id="Maze">
+        <!-- 迷宫Title -->
+        <div id="mazeTitle">
+            <h1>
+                The Amazing Mouse Maze!
+            </h1>
+            <p>
+                Move your mouse over the "S" to begin.
+            </p>
+        </div>
+        <div id="mazeResult">
+            Don`t cheat,you shold start from the 'S' and move to the 'E' inside the maze!
+        </div>
+        <!-- 迷宫游戏主体 -->
+        <div id="mazeContainer">
+            <div class="wall topBlock"></div>
+            <div class="wall left"></div>
+            <div class="wall right"></div>
+            <div class="specialWall" id="stratBlock">S</div>
+            <div class="specialWall" id="endBlock">E</div>
+            <div class="wall middle"></div>
+            <div class="wall bottomBlock"></div>
+        </div>
+        <!-- 迷宫游戏提示 -->
+        <div id="mazeInstruction">
+            <p class="instruction">The object of this game is to guide the mouse cursor through the start area and get to the end area.
+                Be sure to avoid the walls:</p>
+            <div class="wall" id="wallExample"></div>
+            <p>Good luck!</p>
+        </div>
+    </div>
+
+    <!-- 打地鼠 -->
+    <div id="Mole">
+
+    </div>
+</body>
+
+</html>

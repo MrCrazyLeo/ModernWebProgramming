@@ -1,0 +1,108 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align:	center;
+    background-color: white;
+    font-family: "Century Gothic", sans-serif;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 548;
+}
+
+#mazeTitle p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#mazeResult{
+    font-size: 20px;
+    font-weight: 500;}
+
+
+#mazeContainer{
+    width: 500px;
+    height: 300px;
+    margin: 0 auto
+}
+
+.wall{
+    background-color: #eeeeee;
+    border: 1px solid black
+}
+
+#mazeContainer .topBlock, .bottomBlock{
+    height: 15%;
+}
+
+#mazeContainer .left, .right{
+    height: 50%;
+    width: 27%;
+    border-top:none;
+    margin-top: -1px;
+
+}
+
+#mazeContainer .left{
+    float: left;
+}
+
+#mazeContainer .right{
+    float: right;
+}
+
+#mazeContainer .middle{
+    position: relative;
+    height: 53%;
+    width: 20%;
+    margin:0 auto;
+    border-bottom: none;
+    margin-top:45px;
+}
+
+#mazeContainer .specialWall{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border:1px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 1px;
+    /* margin-bottom: 1px; */
+}
+
+#stratBlock{
+    background-color: rgb(130, 255, 131);
+    float: left;
+    clear: left;
+}
+
+#endBlock{
+    background-color: rgb(136, 132, 255);
+    float: right;
+    clear: right;
+}
+
+#mazeInstruction{
+    font-size: 13px;
+}
+
+#mazeInstruction p{
+    width:35em;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#wallExample{
+    margin:auto;
+    height: 30px;
+    width: 100px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px #000;
+    margin-top: 10px;
+}
