@@ -44,8 +44,57 @@
         </div>
     </div>
 
+    <!-- 分割线 -->
+    <div id="separationLine"></div>
+
     <!-- 打地鼠 -->
     <div id="Mole">
+        <!-- 打地鼠Title -->
+         <div id="moleTitle">
+            <h1>
+                Whac-a-mole
+            </h1>
+            <p>
+                Test your skill.How many boxes(moles) can you check(hit) in 30 seconds?
+            </p>
+        </div>
+        <!-- 打地鼠游戏主体 -->
+        <div id="moleContainer">
+            <!-- 打地鼠标题栏 -->
+            <div id="moleBar">
+                <button id="startOrStop">Start Game | Stop Game</button>
+                
+                <p>Time:
+                    <span id="time">30</span>
+                </p>
+
+                <div id="moleResult">Ready to play</div>
+                
+                <p>Scores:
+                    <span id="score">0</span>
+                </p>    
+            </div>
+
+            <!-- 地鼠主体 -->
+            <div id="moleBody">
+            </div>
+
+            <!-- 打地鼠游戏提示 -->
+            <div id="moleInstructions">
+                <ol>
+                    <li>
+                        Click on the radio buttons(moles) as they are selected randomly by the computer.
+                    </li>
+                    <li>
+                        1 point per hit, minus 1 point per miss.
+                    </li>  
+                    <li>
+                        Will storage your best score.If you refresh this page, the record will be lost.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
 
     </div>
 </body>
