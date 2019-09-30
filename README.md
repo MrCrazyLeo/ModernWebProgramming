@@ -19,3 +19,7 @@
 
 【作业5】
 ![image](HM-5/demo.gif)
+
+【作业6】
+![image](HM-6/demo.gif)
+
