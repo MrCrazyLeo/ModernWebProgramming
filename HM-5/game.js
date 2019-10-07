@@ -8,7 +8,7 @@ window.onload = function () {
     var result = document.getElementById("mazeResult");
     var start = document.getElementById("startBlock");
     var end = document.getElementById("endBlock");
-    var map = document.getElementById("moleBody");
+    var map = document.getElementById("mazeContainer");
     var walls = document.getElementsByClassName("wall");
     const MSG_WIN = "You Win !";
     const MSG_LOSS = "You Lose !";
@@ -101,11 +101,11 @@ window.onload = function () {
     var time = document.getElementById("time");
     let timer = null;
 
-    const MSG_MOLE_START = 'Now Playing !!!';
+    const MSG_MOLE_START = 'Now Playing !';
     const MSG_MOLE_READY = 'Ready to play ~';
-    const MSG_MOLE_END = 'Game Over !!!';
-    const MSG_MOLE_HIT = 'Successfully Hit a Mole !';
-    const MSG_MOLE_MISS = 'MISS !!! Try again !!!';
+    const MSG_MOLE_END = 'Game Over !';
+    const MSG_MOLE_HIT = 'Successfully Hit !';
+    const MSG_MOLE_MISS = 'MISS !!! Try again !';
 
     setHole();
 
@@ -115,11 +115,11 @@ window.onload = function () {
     function setHole(){
         for(var i = 0; i < 60; i++){
             var element = document.createElement("div");
-            element.setAttribute("id", i);
+            element.setAttribute("data-id", i); //HTML5 data-*属性，用于存储私有页面的自定义数据。
             element.className = "hole";
             // 每个洞注册监听器
             element.addEventListener("click", onBeat);
-            map.appendChild(element);
+            moleMap.appendChild(element);
         }
     }
 
@@ -182,22 +182,24 @@ window.onload = function () {
         }
 
         const { id } = event.target.dataset;
-        if (id != mole.dataset.id) {
+        if (id !== mole.dataset.id) {
             setScore(--count);
+            setMoleResult(MSG_MOLE_MISS);
             return;
         }
       
-        let index;
+        let index = 0;
       
         do {
             index = Math.ceil((holes.length - 1) * Math.random());
-          } while (index === parseInt(mole.dataset.id));
+          } while (index === parseInt(mole.dataset.id));// 如果随机生成的id恰好等于原本的id，则循环代码块随机再生成一个id，直到跟原本id不同为止
       
         mole.className = "hole";
         mole = holes[index];
         mole.className = "mole";
       
         setScore(++count);
+        setMoleResult(MSG_MOLE_HIT);
 
     }
 

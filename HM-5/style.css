@@ -130,6 +130,7 @@ h1{
     border: 1px solid black;
     box-shadow: 1px 1px 2px #000;
     margin-top: 10px;
+    background-color: #eeeeee;
 }
 
 /* 两个小游戏的分割线 */
@@ -184,7 +185,7 @@ h1{
 }
 
 #moleBody{
-    width: 340px;
+    width: 330px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
