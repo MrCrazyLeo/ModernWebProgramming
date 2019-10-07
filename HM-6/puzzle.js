@@ -10,12 +10,17 @@ $(function(){
     var PicId = 1;
     var imagePath =  'image/'+ PicId + '.jpg';
 
+    var gameOver = true; // 一开始“游戏结束”设置为true
+
+    var steps = 0; // 记录操作的次数
+    var str_steps = "Step: " + steps;
+
     // 画表格map
     var createMap = function(){ 
         for(let i=0; i<4; i= i+1){
             for(let j=0; j<4; j=j+1){
                 let id = i*4+j;
-                if(id === 15){
+                if(id == 15){
                     break;
                 }
                 //console.log('id: ',id);
@@ -41,13 +46,13 @@ $(function(){
     // 重置游戏
     var resetGame = function(PicId = 1){
         imagePath =  'image/'+ PicId + '.jpg';
+        // gameOver = true;
+        // steps = 0;
+        // str_steps = "Step: " + steps;
         resetMap();
     }
     
-    var gameOver = true; // 一开始“游戏结束”设置为true
 
-    var steps = 0; // 记录操作的次数
-    var str_steps = "Step: " + steps;
 
     var changeSteps = function(flag = 1 ){
         if(flag == 1){
@@ -196,7 +201,8 @@ $(function(){
         changeSteps(0);
         randomShuffle();
         onlyTimer = timer();
-        
+        console.log("游戏开始");
+        $(".grid").click(clickGrid);
 
     })
 
@@ -210,12 +216,13 @@ $(function(){
         resetTime();
         setTimeout(alert, 200, "游戏结束");
         changeSteps(0);
+        console.log("游戏结束");
         
 
     })
 
     $(document).keydown(function(event){
-        if(gameOver === false){
+        if(gameOver == false){
             var keyNum = event.which;   //获取键值
             switch(keyNum){  //判断按键
             case 37: left();break;
@@ -235,7 +242,7 @@ $(function(){
         // 获取当前空白块的位置
         indexBlank = $("#15").index();
         var gridID = $(this).attr("id");
-        console.log(gridID);
+        //console.log(gridID);
         var currentIndex = $(`#${gridID}`).index();
         switch(currentIndex){  //判断按键
             case indexBlank + 1: left();break;
@@ -248,7 +255,7 @@ $(function(){
             }
     }
 
-    $(".grid").click(clickGrid);
+    
 
     var check = function(){
         for(let i = 0; i < 16; i++){
