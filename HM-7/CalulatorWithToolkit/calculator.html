@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Leo" />
+    <title>Leo的破壳萌计算器</title>
+    <link rel="icon" sizes="196x196" href="img/calculator.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js "></script>        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="screen">
+            <div class="screen_display" id="display"></div>
+        </div>
+
+        <div id="buttons">
+            <div class="keys">
+                <button class="operator orangeFont">AC</button>
+                <button class="operator">(</button>
+                <button class=" operator ">)</button>
+                <button class="operator " id="divide">÷</button>
+
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="operator" id="multiply">×</button>
+
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="operator" id="subtract">-</button>
+
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="operator" id="add">+</button>
+
+                <button class="operator" id="backspace">_</button>
+                <button class="number">0</button>
+                <button class="operator">.</button>
+                <button class="operator orangeBG" id="key-calculate">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
