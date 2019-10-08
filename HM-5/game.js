@@ -10,6 +10,7 @@ window.onload = function () {
     var end = document.getElementById("endBlock");
     var map = document.getElementById("mazeContainer");
     var walls = document.getElementsByClassName("wall");
+    console.log(walls);
     const MSG_WIN = "You Win !";
     const MSG_LOSS = "You Lose !";
     const MSG_CHEAT = "Don't cheat, you should start from the 'S' and move to the 'E' inside the maze!";
@@ -91,7 +92,7 @@ window.onload = function () {
 
     // “开始”标志
     var controller = document.getElementById("startOrStop");
-    var status = true;
+    var status = false;
     // 为“开始”按键设置监听器
     controller.addEventListener('click', onGameStart);
 
@@ -152,10 +153,12 @@ window.onload = function () {
     }
 
     function onGameStart(){
+        
+
         // 在游戏开始按下，判断为终止，清除掉定时器！！
         if(status){
             status = false;
-            mole.className = "hole";
+            mole.className = 'hole';
             clearInterval(timer);
             timer = null;
             setMoleResult(MSG_MOLE_READY);
