@@ -1,0 +1,216 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    text-align:	center;
+    background-color: white;
+    font-family: "Century Gothic", sans-serif;
+}
+
+
+/* ************************************************ */
+/*                    迷宫样式设置                   */
+/* ************************************************  */
+h1{
+    font-size: 30px;
+    font-weight: 548;
+}
+
+#mazeTitle p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#mazeResult{
+    font-size: 20px;
+    font-weight: 500;
+    height: 55px;
+    opacity: 0;
+    transition: all 0.5s;
+    
+}
+
+#mazeResult[show]{
+    font-size: 20px;
+    font-weight: 500;
+    height: 55px;
+    opacity: 1;
+    color:red;
+    transition: all 0.5s;
+    /* margin-bottom: 1em; */
+}
+
+
+#mazeContainer{
+    width: 500px;
+    height: 300px;
+    margin: 0 auto
+}
+
+.wall, #wallExample{
+    background-color: #eeeeee;
+    border: 1px solid black;
+}
+
+.wall[red] {
+    background-color: red;
+    border: 1px solid black;
+    transition: all 0.5s;
+}
+
+#mazeContainer .topBlock, .bottomBlock{
+    height: 15%;
+}
+
+#mazeContainer .left, .right{
+    height: 50%;
+    width: 27%;
+    border-top:none;
+    margin-top: -1px;
+
+}
+
+#mazeContainer .left{
+    float: left;
+}
+
+#mazeContainer .right{
+    float: right;
+}
+
+#mazeContainer .middle{
+    position: relative;
+    height: 53%;
+    width: 20%;
+    margin:0 auto;
+    border-bottom: none;
+    margin-top:44px;
+    top:1px;
+}
+
+#mazeContainer .specialWall{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border:1px solid black;
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 1px;
+}
+
+#startBlock{
+    background-color: rgb(130, 255, 131);
+    float: left;
+    clear: left;
+}
+
+#endBlock{
+    background-color: rgb(136, 132, 255);
+    float: right;
+    clear: right;
+}
+
+#mazeInstruction{
+    font-size: 13px;
+}
+
+#mazeInstruction p{
+    width:35em;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#wallExample{
+    margin:auto;
+    height: 30px;
+    width: 100px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px #000;
+    margin-top: 10px;
+}
+
+/* 两个小游戏的分割线 */
+#separationLine{
+    background-color: gray;
+    height: 07px;
+    width:80%;
+    margin: 50px auto 50px auto;
+}
+
+/* ************************************************ */
+/*                    打地鼠样式设置                  */
+/* ************************************************  */
+
+#moleInstructions{
+    width: 700px;
+    margin:0 auto;
+    text-align: left;
+}
+
+#moleContainer{
+    width: 700px;
+    margin:0 auto;
+}
+
+#moleBar{
+    width: 400px;
+    margin:0 auto;
+}
+
+#startOrStop, #moleResult{
+    width:165px;
+    height: 30px;
+    float: left;
+    clear: left;
+}
+
+#moleResult{
+    border: 1px solid black;
+    height: 20px;
+    margin-top: 2px;
+    text-align: center;
+}
+
+#time, #score{
+    width: 80px;
+    height: 40px;
+    /* border: 1px solid black; */
+    /* position: absolute;
+    top:0px;
+    left:30px; */
+}
+
+#moleBody{
+    width: 330px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: grid;
+    /* grid-template-columns属性定义每一列的列宽，*/
+    /* grid-template-rows属性定义每一行的行高。 */ 
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.hole{
+    margin: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/* 既是地鼠，又是宝可梦球 */
+.mole {
+    margin: 0px;
+    float: left;
+    width: 40px;
+    height: 40px;
+    /* border-radius: 50%; */
+    background-image: url('../img/pokeball.png');
+    background-repeat: no-repeat;
+    background-size: 43px 43px;
+}
